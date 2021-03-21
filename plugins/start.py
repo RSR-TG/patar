@@ -6,9 +6,9 @@ async def start(client, message):
     # return
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("Channel", url="https://t.me/mizolibrary")],
-        [InlineKeyboardButton("Group" , url="https://t.me/rsrtginfo")],
-            "Report Bugs ", url="https://t.me/rsrtginfo")]
+        [InlineKeyboardButton(
+            "Group", url="https://t.me/rsrtginfo")]
     ])
-    welcomed = f"Hey <b>{message.from_user.first_name}</b> hit\n/help for More info"
+    welcomed = f"Hey <b>{message.from_user.first_name}</b> hit\n/help for More info\n\nJoin Our Update Group and Update Channel👇"
     await message.reply_text(welcomed, reply_markup=joinButton)
     raise StopPropagation
